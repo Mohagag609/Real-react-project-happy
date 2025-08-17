@@ -1,0 +1,35 @@
+{
+  "name": "estate-manager-desktop",
+  "version": "1.0.0",
+  "description": "تطبيق سطح مكتب لإدارة الاستثمار العقاري",
+  "main": "main.js",
+  "author": "Jules",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.1.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "electron": "^31.2.1",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.example.estatemanager",
+    "productName": "Estate Manager",
+    "files": [
+      "main.js",
+      "src/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
