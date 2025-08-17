@@ -192,6 +192,20 @@ function initializeDatabase() {
                 details TEXT
             )
         `).run();
+
+        // Transfers Table
+        db.prepare(`
+            CREATE TABLE IF NOT EXISTS transfers (
+                id TEXT PRIMARY KEY,
+                fromSafeId TEXT NOT NULL,
+                toSafeId TEXT NOT NULL,
+                amount REAL NOT NULL,
+                date TEXT NOT NULL,
+                notes TEXT,
+                FOREIGN KEY (fromSafeId) REFERENCES safes(id),
+                FOREIGN KEY (toSafeId) REFERENCES safes(id)
+            )
+        `).run();
     });
 
     try {

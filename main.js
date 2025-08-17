@@ -12,10 +12,10 @@ function createWindow() {
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'src', 'preload.js'),
-      // It's recommended to set contextIsolation to true and use a preload script.
-      // For this refactoring, we'll keep it simple, but for a new app, this should be true.
-      contextIsolation: false,
-      nodeIntegration: true // This is needed for the renderer to use `require` if necessary
+      // contextIsolation must be true to use contextBridge in preload.js.
+      // nodeIntegration should be false for security.
+      contextIsolation: true,
+      nodeIntegration: false
     },
     icon: path.join(__dirname, 'src/frontend/favicon.ico') // Assuming you might have a favicon
   });
