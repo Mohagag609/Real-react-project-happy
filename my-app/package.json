@@ -1,0 +1,23 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "Existing web app wrapped in Electron with a SQLite backend.",
+  "main": "main.js",
+  "author": "Jules for the user",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "npx electron .",
+    "rebuild": "npx @electron/rebuild -f -w better-sqlite3",
+    "build": "npx @electron/packager . MyApp --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "electron": "28.3.3",
+    "@electron/rebuild": "3.6.1",
+    "@electron/packager": "^18.3.2"
+  }
+}

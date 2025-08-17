@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' http://localhost:3000;">
+
+    <title>قائمة المهام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>قائمة المهام</h1>
+            <p>مثال عملي على استخدام Electron + SQLite</p>
+        </header>
+        <main>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="أضف مهمة جديدة..." autocomplete="off" required>
+                <button type="submit">إضافة</button>
+            </form>
+            <ul id="task-list">
+                <!-- سيتم إدراج المهام هنا بواسطة JavaScript -->
+            </ul>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
