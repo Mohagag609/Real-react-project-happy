@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder",
-    "rebuild": "electron-rebuild"
+    "rebuild": "electron-rebuild -v 31.2.1"
   },
   "dependencies": {
     "better-sqlite3": "^11.1.2",
